@@ -319,10 +319,15 @@ button:hover {
 .main-content .skills {
     margin-bottom: 30px;
 }
+.main-content .skills h2 {
+    border-bottom: 2px solid #00ffcc;
+}
+.main-content .experience h2 {
+    border-bottom: 2px solid #00ffcc;
+}
 .main-content .section h2 {
     font-size: 1.5em;
     color: #00ffcc;
-    border-bottom: 2px solid #00ffcc;
     padding-bottom: 5px;
     margin-bottom: 15px;
 }
