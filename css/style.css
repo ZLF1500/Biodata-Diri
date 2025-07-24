@@ -50,6 +50,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 24px;
 }
 header h1 {
     margin: 0;
@@ -158,6 +159,8 @@ nav {
     background-color: #181818;
     padding: 10px;
     text-align: center;
+    margin-bottom: 24px; /* Jarak bawah nav ke konten */
+    margin-top: -28px;   /* Dekatkan lebih rapat lagi ke header */
 }
 nav a {
     margin: 0 15px;
@@ -199,6 +202,7 @@ footer {
     background-color: #181818;
     padding: 10px;
     text-align: center;
+    margin-top: 32px; /* Jarak atas footer ke konten */
 }
 button {
     padding: 10px 20px;
