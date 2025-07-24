@@ -405,3 +405,49 @@ button:hover {
     }
 
 }
+@media (max-width: 600px) {
+    .container, .cv-container {
+        display: flex !important;
+        flex-direction: column !important;
+        width: 100% !important;
+        padding: 0 5px !important;
+        max-width: 100% !important;
+        box-sizing: border-box;
+    }
+    .sidebar, .main-content, .section.card {
+        width: 100% !important;
+        margin: 0 !important;
+        box-sizing: border-box;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+    .sidebar img {
+        width: 90px !important;
+        height: 90px !important;
+    }
+    .section.skills ul li,
+    .section.experience ul li {
+        font-size: 13px !important;
+        word-break: break-word;
+        padding: 8px !important;
+    }
+    .text-center {
+        text-align: center !important;
+    }
+    .roblox-username, .playlist-link {
+        font-size: 15px !important;
+        display: block !important;
+        margin: 10px 0 !important;
+        word-break: break-all;
+    }
+    .section {
+        padding: 10px !important;
+        margin: 8px 0 !important;
+    }
+    header h1 {
+        font-size: 1.3em !important;
+    }
+    .sidebar h2 {
+        font-size: 1.2em !important;
+    }
+}
