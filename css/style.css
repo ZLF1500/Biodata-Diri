@@ -1,0 +1,407 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, red, blue, green);
+    background-attachment: fixed;
+    background-size: 600% 600%;
+    animation: gradientAnimation 10s ease infinite;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden;
+    transition: background-color 0.5s, color 0.5s;
+    scroll-behavior: smooth;
+}
+
+/* Definisikan animasi gradient */
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Animasi fade-in untuk elemen yang muncul */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Terapkan animasi fade-in pada elemen .section */
+.section {
+    animation: fadeIn 1s ease-in-out;
+}
+
+header {
+    position: relative;
+    background-color: #333; /* Warna abu-abu untuk tema gelap */
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    font-family: 'Helvetica', sans-serif;
+    font-weight: bold;
+    color: #00ffcc;
+    flex-grow: 1;
+    text-align: left;
+}
+#theme-switcher {
+    padding: 10px 20px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-family: 'Helvetica', sans-serif;
+    font-size: 1em;
+    transition: background-color 0.3s, color 0.3s;
+    outline: none;
+}
+#theme-switcher:focus {
+    outline: 2px solid #00ffcc; /* Fokus yang jelas */
+}
+#theme-switcher:active {
+    background-color: #fff;
+    color: #000;
+}
+#theme-switcher:hover {
+    background: linear-gradient(to right, red, blue, green);
+    background-size: 600% 600%;
+    animation: gradientAnimation 10s ease infinite;
+    color: #fff;
+}
+.light-mode {
+    background: linear-gradient(to right, red, blue, green);
+    background-attachment: fixed;
+    background-size: 600% 600%;
+    animation: gradientAnimation 10s ease infinite;
+    color: #121212;
+}
+.light-mode header {
+    background-color: #ccc; /* Mengurangi kecerahan warna putih pada header di light theme */
+}
+.light-mode header h1 {
+    color: #006400; /* Warna font judul di light theme menjadi hitam */
+}
+.light-mode #theme-switcher {
+    background-color: #fff;
+    color: #000;
+}
+.light-mode #theme-switcher:focus {
+    outline: 2px solid #006400; /* Fokus yang jelas untuk light mode */
+}
+.light-mode #theme-switcher:active,
+.light-mode #theme-switcher:hover {
+    background: linear-gradient(to right, red, blue, green);
+    background-size: 600% 600%;
+    animation: gradientAnimation 10s ease infinite;
+    color: #fff;
+}
+
+/* Scrollbar untuk browser Webkit (Chrome, Safari) */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: #282828; /* Warna untuk tema gelap */
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #00ffcc; /* Warna untuk tema gelap */
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #14833b; /* Warna untuk tema gelap */
+}
+
+/* Scrollbar untuk Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #00ffcc #282828; /* Warna untuk tema gelap */
+}
+
+.light-mode ::-webkit-scrollbar-track {
+    background: #ddd; /* Warna untuk tema terang */
+}
+
+.light-mode ::-webkit-scrollbar-thumb {
+    background: #006400; /* Warna untuk tema terang */
+}
+
+.light-mode ::-webkit-scrollbar-thumb:hover {
+    background: #00ffcc; /* Warna untuk tema terang */
+}
+
+.light-mode * {
+    scrollbar-color: #006400 #ddd; /* Warna untuk tema terang */
+}
+
+nav {
+    background-color: #181818;
+    padding: 10px;
+    text-align: center;
+}
+nav a {
+    margin: 0 15px;
+    color: #00ffcc;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s; /* Transisi untuk perubahan warna */
+}
+nav a:focus {
+    outline: 2px solid #00ffcc; /* Fokus yang jelas */
+}
+.container {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto; /* Menyelaraskan container ke tengah */
+}
+.section {
+    background-color: #282828;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: left;
+    transition: background-color 0.5s, opacity 1s ease-in-out; /* Transisi dengan animasi fade-in */
+    opacity: 0; /* Awalnya tersembunyi */
+}
+.section.fade-in {
+    opacity: 1; /* Menampilkan elemen setelah animasi */
+}
+.section h2 {
+    margin-top: 0;
+    font-family: 'Helvetica', sans-serif;
+    font-size: 2em;
+    color: #00ffcc;
+}
+footer {
+    background-color: #181818;
+    padding: 10px;
+    text-align: center;
+}
+button {
+    padding: 10px 20px;
+    margin: 20px auto;
+    display: block;
+    background-color: #00ffcc;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+button:focus {
+    outline: 2px solid #14833b; /* Fokus yang jelas */
+}
+button:hover {
+    background-color: #14833b;
+}
+.light-mode {
+    background-color: #f0f0f0;
+    color: #121212;
+}
+.light-mode .section {
+    background-color: #e0e0e0;
+}
+.light-mode .section h2 {
+    margin-top: 0;
+    font-family: 'Helvetica', sans-serif;
+    font-size: 2em;
+    color: #006400;
+}
+.light-mode .section ul li {
+    background-color: #ccc;
+}
+.light-mode nav, .light-mode footer {
+    background-color: #ddd;
+}
+.light-mode nav a {
+    color: #006400;
+}
+.light-mode button {
+    background-color: #006400;
+}
+.light-mode button:hover {
+    background-color: #00ffcc;
+}
+.cv-container {
+    background-color: #1c1c1c;
+    width: 100%;
+    max-width: 1000px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    overflow: hidden;
+}
+.sidebar {
+    background-color: #161616;
+    padding: 40px;
+    text-align: center;
+}
+.sidebar img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid #00ffcc;
+    margin-bottom: 20px;
+}
+.sidebar h2 {
+    font-size: 1.8em;
+    margin: 20px 0;
+    color: #00ffcc;
+}
+.sidebar p {
+    font-size: 1.1em;
+    color: #aaa;
+}
+.sidebar hr {
+    border: none;
+    height: 2px;
+    background-color: #00ffcc;
+    margin: 20px 0;
+}
+.sidebar .contact-info {
+    font-size: 0.95em;
+    text-align: left;
+}
+.sidebar .contact-info p {
+    margin: 15px 0;
+    line-height: 1.6;
+}
+.sidebar .contact-info i {
+    color: #00ffcc;
+    margin-right: 10px;
+}
+.main-content {
+    padding: 40px;
+    background-color: #1c1c1c;
+}
+.main-content h1 {
+    font-size: 2.2em;
+    color: #00ffcc;
+    margin-bottom: 10px;
+}
+.main-content h3 {
+    color: #fff;
+    margin-bottom: 10px;
+    font-size: 1.3em;
+}
+.main-content p {
+    color: #aaa;
+    line-height: 1.6;
+}
+.main-content .section {
+    margin-bottom: 30px;
+}
+.main-content .section h2 {
+    font-size: 1.5em;
+    color: #00ffcc;
+    border-bottom: 2px solid #00ffcc;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+.main-content .skills ul, .main-content .experience ul {
+    list-style: none;
+    padding: 0;
+}
+.main-content .skills ul li, .main-content .experience ul li {
+    background: rgba(0, 255, 204, 0.1);
+    padding: 10px;
+    margin-bottom: 10px;
+    border-left: 4px solid #00ffcc;
+    transition: 0.3s;
+}
+.main-content .skills ul li:hover, .main-content .experience ul li:hover {
+    background: rgba(0, 255, 204, 0.3);
+}
+@media (max-width: 768px) {
+    .cv-container {
+        grid-template-columns: 1fr;
+    }
+    .sidebar {
+        padding: 20px;
+    }
+    .main-content {
+        padding: 20px;
+    }
+    .main-content h1 {
+        font-size: 1.8em;
+    }
+    .main-content .section h2 {
+        font-size: 1.3em;
+    }
+}
+@media (max-width: 480px) {
+    .sidebar img {
+        width: 120px;
+        height: 120px;
+    }
+    .sidebar h2 {
+        font-size: 1.5em;
+    }
+    .main-content h1 {
+        font-size: 1.6em;
+    }
+    .main-content p {
+        font-size: 0.95em;
+    }
+}
+
+/* Gayakhusus untuk layar dengan lebar maksimum 768px */
+@media (max-width: 768px) {
+    body {
+        background-size: 400% 400%;
+    }
+
+    header {
+        padding: 10px;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav {
+        flex-direction: column;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    .section {
+        padding: 15px;
+        margin: 10px 0;
+    }
+
+    .section h2 {
+        font-size: 1.5em;
+    }
+
+    .profile-img {
+        border: 5px solid #4CAF50; /* warna hijau, bisa kamu ganti sesuai selera */
+        border-radius: 10px;       /* sudut membulat, opsional */
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); /* efek bayangan */
+    }
+
+}
