@@ -455,3 +455,15 @@ button:hover {
         font-size: 1.2em !important;
     }
 }
+
+a,
+a:visited,
+a:active {
+    color: #00ffcc !important;
+}
+
+a:hover,
+a:focus {
+    color: #00bfa3 !important;
+    text-decoration: underline;
+}
