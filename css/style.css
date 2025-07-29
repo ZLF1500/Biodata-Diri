@@ -159,7 +159,7 @@ nav {
     background-color: #181818;
     padding: 10px;
     text-align: center;
-    margin-bottom: 20px; /* Jarak bawah nav ke konten */
+    margin-bottom: 24px; /* Jarak bawah nav ke konten */
     margin-top: -28px;   /* Dekatkan lebih rapat lagi ke header */
 }
 nav a {
@@ -198,12 +198,7 @@ nav a:focus {
     font-size: 2em;
     color: #00ffcc;
 }
-footer {
-    background-color: #181818;
-    padding: 10px;
-    text-align: center;
-    margin-top: 20px; /* Jarak atas footer ke konten */
-}
+
 button {
     padding: 10px 20px;
     margin: 20px auto;
@@ -260,9 +255,17 @@ button:hover {
     overflow: hidden;
 }
 .sidebar {
-    background-color: #161616;
-    padding: 40px;
+    background: linear-gradient(180deg, #00ffcc22 0%, #181818 40%, #00ffcc22 100%);
+    border-radius: 16px;
+    padding: 24px 18px;
+    min-width: 220px;
+    box-shadow: 0 2px 12px rgba(0,255,204,0.06);
     text-align: center;
+    height: 100%;
+    min-height: 600px; /* Tambahkan tinggi minimum agar sidebar lebih panjang */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 .sidebar img {
     width: 150px;
@@ -270,6 +273,9 @@ button:hover {
     border-radius: 50%;
     border: 5px solid #00ffcc;
     margin-bottom: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 .sidebar h2 {
     font-size: 1.8em;
@@ -415,49 +421,110 @@ button:hover {
 
 }
 @media (max-width: 600px) {
-    .container, .cv-container {
-        display: flex !important;
-        flex-direction: column !important;
-        width: 100% !important;
-        padding: 0 5px !important;
-        max-width: 100% !important;
-        box-sizing: border-box;
+    body {
+        padding: 0;
+        margin: 0;
+        background: #181818;
     }
-    .sidebar, .main-content, .section.card {
-        width: 100% !important;
-        margin: 0 !important;
-        box-sizing: border-box;
-        padding-left: 0 !important;
-        padding-right: 0 !important;
+    .container {
+        padding: 0;
+        margin: 0;
+    }
+    .cv-container {
+        flex-direction: column;
+        min-height: unset;
+        padding: 0;
+        margin: 0;
+    }
+    .sidebar {
+        min-width: 100%;
+        border-radius: 0 0 16px 16px;
+        padding: 18px 8px;
+        min-height: unset;
+        box-shadow: none;
     }
     .sidebar img {
-        width: 90px !important;
-        height: 90px !important;
-    }
-    .section.skills ul li,
-    .section.experience ul li {
-        font-size: 13px !important;
-        word-break: break-word;
-        padding: 8px !important;
-    }
-    .text-center {
-        text-align: center !important;
-    }
-    .roblox-username, .playlist-link {
-        font-size: 15px !important;
-        display: block !important;
-        margin: 10px 0 !important;
-        word-break: break-all;
-    }
-    .section {
-        padding: 10px !important;
-        margin: 8px 0 !important;
-    }
-    header h1 {
-        font-size: 1.3em !important;
+        width: 110px;
+        height: 110px;
+        margin-bottom: 12px;
     }
     .sidebar h2 {
-        font-size: 1.2em !important;
+        font-size: 1.3em;
+        margin: 12px 0;
+    }
+    .sidebar p {
+        font-size: 1em;
+    }
+    .contact-info p {
+        font-size: 0.98em;
+        margin: 6px 0;
+        word-break: break-all;
+    }
+    .main-content {
+        padding: 0 4px;
+    }
+    .section.card {
+        padding: 12px 6px;
+        border-radius: 10px;
+        margin: 12px 0;
+    }
+    .card-title,
+    .account-title {
+        font-size: 1.1em;
+        padding-left: 2px;
+    }
+    .card-title-bar,
+    .account-title-bar {
+        height: 2px;
+        margin: 6px 0 12px 0;
+    }
+    .biodata-list li,
+    .account-list li {
+        font-size: 0.98em;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2px;
+        padding: 8px 8px;
+        margin-bottom: 8px;
+    }
+    .biodata-label,
+    .account-label {
+        min-width: unset;
+        font-size: 1em;
+    }
+    .address-card {
+        padding: 8px 8px;
+        margin-bottom: 8px;
+    }
+    .address-title {
+        font-size: 1em;
+        margin-bottom: 4px;
+    }
+    .address-value {
+        font-size: 0.98em;
+    }
+    .account-btn {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 6px;
+        font-size: 1em;
+        padding: 8px 0;
+    }
+    .main-footer {
+        padding: 14px 0 8px 0;
+        border-radius: 0;
+        font-size: 0.98em;
+    }
+    .footer-social a {
+        font-size: 1.2em;
+        margin: 0 6px;
+    }
+}
+
+/* Sembunyikan header di tampilan Mobile */
+@media (max-width: 600px) {
+    .main-header {
+        display: none;
     }
 }
 
@@ -472,3 +539,315 @@ a:focus {
     color: #00bfa3 !important;
     text-decoration: underline;
 }
+
+/* Tambahkan di css/style.css */
+.main-header {
+    background: linear-gradient(90deg, #181818 60%, #00ffcc 100%);
+    padding: 24px 0 16px 0;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.12);
+    margin-bottom: 0;
+}
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+}
+.header-img {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    border: 3px solid #00ffcc;
+    box-shadow: 0 0 10px #00ffcc44;
+    object-fit: cover;
+}
+.header-title {
+    font-size: 2.2em;
+    color: #00ffcc;
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    letter-spacing: 2px;
+}
+.header-subtitle {
+    font-size: 1.1em;
+    color: #fff;
+    margin-top: 6px;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+@media (max-width: 600px) {
+    .header-content {
+        flex-direction: column;
+        gap: 12px;
+    }
+    .header-title {
+        font-size: 1.4em;
+    }
+    .header-img {
+        width: 56px;
+        height: 56px;
+    }
+}
+
+/* Tambahkan di css/style.css */
+.main-footer {
+    background: linear-gradient(90deg, #181818 60%, #00ffcc 100%);
+    color: #fff;
+    padding: 24px 0 12px 0;
+    text-align: center;
+    box-shadow: 0 -2px 12px rgba(0,0,0,0.12);
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+}
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+.footer-content p {
+    margin: 0;
+    font-size: 1em;
+    letter-spacing: 1px;
+}
+.footer-social {
+    display: flex;
+    gap: 18px;
+    margin-top: 8px;
+}
+.footer-social a {
+    color: #00ffcc;
+    font-size: 1.5em;
+    transition: color 0.2s;
+}
+.footer-social a:hover {
+    color: #fff;
+}
+@media (max-width: 600px) {
+    .main-footer {
+        padding: 16px 0 8px 0;
+        border-radius: 0;
+    }
+    .footer-social a {
+        font-size: 1.2em;
+    }
+}
+
+/* Tambahkan di css/style.css */
+.account-card {
+    background: linear-gradient(90deg, #232323 60%, #00ffcc22 100%);
+    border-radius: 16px;
+    box-shadow: 0 2px 16px rgba(0,255,204,0.08);
+    padding: 24px 18px;
+    border-left: 4px solid #00ffcc;
+}
+
+.account-title {
+    font-size: 1.4em;
+    color: #00ffcc;
+    margin-bottom: 0;
+    font-weight: bold;
+    text-align: left;
+    position: relative;
+    padding-left: 4px;
+}
+
+/* Hapus pseudo-element garis pada judul akun */
+.account-title::before,
+.account-title::after {
+    display: none;
+}
+
+.account-title-bar {
+    width: 100%;
+    height: 3px;
+    background: #00ffcc;
+    margin: 8px 0 18px 0;
+    border-radius: 2px;
+}
+
+.account-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.account-list li {
+    background: rgba(0,255,204,0.08);
+    margin-bottom: 10px;
+    font-size: 1em;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    border-left: 3px solid #00ffcc;
+    padding: 12px 16px;
+    border-radius: 8px;
+    position: relative;
+}
+
+.account-list li::before {
+    content: none;
+}
+
+.account-label {
+    font-weight: 600;
+    color: #fff;
+    min-width: 110px;
+    display: inline-block;
+}
+
+.account-separator {
+    min-width: 18px;
+    text-align: center;
+    color: #00ffcc;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.account-link {
+    color: #00ffcc;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.account-link:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.account-value {
+    color: #fff;
+    font-weight: 400;
+}
+
+.account-btn {
+    background: #00ffcc;
+    color: #181818;
+    border: none;
+    border-radius: 6px;
+    padding: 6px 18px;
+    margin-left: 12px;
+    font-size: 1em;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.2s, color 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.account-btn:hover {
+    background: #00bfa3;
+    color: #fff;
+}
+
+.biodata-card {
+    background: linear-gradient(90deg, #232323 60%, #00ffcc22 100%);
+    border-radius: 16px;
+    box-shadow: 0 2px 16px rgba(0,255,204,0.08);
+    padding: 24px 18px;
+    margin: 18px 0;
+    border-left: 4px solid #00ffcc;
+}
+
+.card-title {
+    font-size: 1.4em;
+    color: #00ffcc;
+    margin-bottom: 0;
+    font-weight: bold;
+    text-align: left;
+    padding-left: 4px;
+}
+
+.card-title-bar {
+    width: 100%;
+    height: 3px;
+    background: #00ffcc;
+    margin: 8px 0 18px 0;
+    border-radius: 2px;
+}
+
+.biodata-list {
+    list-style: none;
+    background: rgba(0,255,204,0.13);
+    border-left: 3px solid #00ffcc;
+    border-radius: 8px;
+    padding: 0;
+    margin: 0;
+}
+
+.biodata-list li {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    padding: 12px 16px;
+    margin-bottom: 10px;
+}
+
+.biodata-label {
+    min-width: 160px; /* Lebar tetap agar titik dua sejajar */
+    font-weight: bold;
+    color: #fff;
+    display: inline-block;
+}
+
+.biodata-separator {
+    min-width: 18px;
+    text-align: center;
+    color: #00ffcc;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.biodata-value {
+    color: #fff;
+    flex: 1;
+    word-break: break-word;
+}
+
+.address-card {
+    background: rgba(0,255,204,0.13);
+    border-left: 3px solid #00ffcc;
+    border-radius: 8px;
+    padding: 12px 16px;
+    margin-bottom: 12px;
+}
+
+.address-title {
+    color: #fff;
+    font-size: 1.1em;
+    font-weight: bold;
+    margin: 0 0 6px 0;
+}
+
+.address-value {
+    color: #fff;
+    font-size: 1em;
+    margin: 0;
+}
+
+@media (max-width: 600px) {
+    .biodata-card {
+        padding: 14px 8px;
+        border-radius: 10px;
+    }
+    .card-title {
+        font-size: 1.1em;
+    }
+    .biodata-list li {
+        font-size: 0.95em;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+    }
+    .address-card {
+        padding: 8px 8px;
+    }
+}
+
+/* Biodata Diri */
+<div class="section card biodata-card">
+    <h2 class="card-title">Biodata Diri</h2>
+    <div class="card-title-bar"></div>
+    <ul class="biodata-list">

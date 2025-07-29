@@ -9,8 +9,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body>
-    <header>
-        <h1>Biodata Diri</h1>
+    <header class="main-header">
+        <div class="header-content">
+            <img src="img/Profile.gif" alt="Foto Profil" class="header-img">
+            <div>
+                <h1 class="header-title">Biodata Diri</h1>
+                <p class="header-subtitle">Zulfi Guruh Saputra | XI PPLG 2</p>
+            </div>
+        </div>
     </header>
     <nav>
     </nav>
@@ -32,59 +38,90 @@
             </div>
 
             <div class="main-content">               
-                <div class="section skills">
-                    <h2>Biodata Diri</h2>
-                    <ul>
-                        <li>Nama Lengkap &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : &nbsp;&nbsp;&nbsp; Zulfi Guruh Saputra</li>
-                        <li>Tempat, tanggal lahir &nbsp;&nbsp;&nbsp; : &nbsp;&nbsp;&nbsp; Samarinda, 29 Juli 2008</li>
-                        <li>Hobi &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : &nbsp;&nbsp;&nbsp; Pecinta Musik, Gamer</li>
+                <!-- Biodata Diri -->
+                <div class="section card biodata-card">
+                    <h2 class="card-title">Biodata Diri</h2>
+                    <div class="card-title-bar"></div>
+                    <ul class="biodata-list">
+                        <li>
+                            <span class="biodata-label">Nama Lengkap</span>
+                            <span class="biodata-separator">:</span>
+                            <span class="biodata-value">Zulfi Guruh Saputra</span>
+                        </li>
+                    </ul><ul class="biodata-list">
+                        <li>
+                            <span class="biodata-label">Tempat, tanggal lahir</span>
+                            <span class="biodata-separator">:</span>
+                            <span class="biodata-value">Samarinda, 29 Juli 2008</span>
+                        </li>
+                    </ul><ul class="biodata-list">
+                        <li>
+                            <span class="biodata-label">Hobi</span>
+                            <span class="biodata-separator">:</span>
+                            <span class="biodata-value">Pecinta Musik, Gamer</span>
+                        </li>
                     </ul>
                 </div>
 
-                <div class="section experience">
-                    <h2>Alamat Lengkap</h2>
-                    <ul>
-                        <li>
-                            <h3>Alamat Rumah</h3>
-                            <p>Jl. Perjuangan - Gerilya No. 52, RT. 103, KEL. SUNGAI PINANG DALAM, KEC. SUNGAI PINANG, KOTA SAMARINDA, PROV. KALIMANTAN TIMUR</p>
-                        </li>
-                        <li>
-                            <h3>Alamat Sekolah</h3>
-                            <p>Jl. Aminah Syukur No. 82, KEL. SUNGAI PINANG LUAR, KEC. SAMARINDA KOTA, KOTA SAMARINDA, PROV. KALIMANTAN TIMUR</p>
-                        </li>
-                    </ul>
+                <!-- Alamat Lengkap -->
+                <div class="section card biodata-card">
+                    <h2 class="card-title">Alamat Lengkap</h2>
+                    <div class="card-title-bar"></div>
+                    <div class="address-card">
+                        <h3 class="address-title">Alamat Rumah</h3>
+                        <p class="address-value">Jl. Perjuangan - Gerilya No. 52, RT. 103, KEL. SUNGAI PINANG DALAM, KEC. SUNGAI PINANG, KOTA SAMARINDA, PROV. KALIMANTAN TIMUR</p>
+                    </div>
+                    <div class="address-card">
+                        <h3 class="address-title">Alamat Sekolah</h3>
+                        <p class="address-value">Jl. Aminah Syukur No. 82, KEL. SUNGAI PINANG LUAR, KEC. SAMARINDA KOTA, KOTA SAMARINDA, PROV. KALIMANTAN TIMUR</p>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="section card text-center">
-            <div class= "main-content">
-                <div class="section experience">
-                    <center>
-                        <h2>Roblox Account</h2>
-                    </center>
-                    <ul>
-                        <li><span>Username &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : &nbsp;&nbsp;&nbsp; </span>
-                        <a href="https://www.roblox.com/id/users/3954178102/profile/" target="_blank">@Zulemvis</a></li>
-                        <li>Display Name &nbsp;&nbsp;&nbsp; : &nbsp;&nbsp;&nbsp; KireiMoon / LonelyZ</li>
-                    </ul>
-                </div>
-            </div>
+        <!-- Ganti bagian container Roblox dan WhatsApp Account dengan yang lebih bagus -->
+        <div class="section card account-card">
+            <h2 class="account-title"><i class="fab fa-roblox"></i> Roblox Account</h2>
+            <div class="account-title-bar"></div>
+            <ul class="account-list">
+                <li>
+                    <span class="account-label">Username</span>
+                    <span class="account-separator">:</span>
+                    <span class="account-value">@Zulemvis</span>
+                </li>
+                <li>
+                    <span class="account-label">Display Name</span>
+                    <span class="account-separator">:</span>
+                    <span class="account-value">KireiMoon / LonelyZ</span>
+                </li>
+            </ul>
         </div>
-        <div class="section card text-center">
-            <div class= "main-content">
-                <div class="experience">
-                    <center>
-                        <h2>WhatsApp Account</h2>
-                        <li><span>WhatsApp &nbsp;&nbsp;&nbsp; : &nbsp;&nbsp;&nbsp; +62 877-5128-1250</span>
-                        <button id="theme-switcher" onclick="window.open('https://wa.me/qr/WWVHEA4ZUV5TO1', '_blank')">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Chat &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button></li>
-                    </center>
-                </div>
-            </div>
+        <div class="section card account-card">
+            <h2 class="account-title"><i class="fab fa-whatsapp"></i> WhatsApp Account</h2>
+            <div class="account-title-bar"></div>
+            <ul class="account-list">
+                <li>
+                    <span class="account-label">WhatsApp</span>
+                    <span class="account-separator">:</span>
+                    <span class="account-value">+62 877-5128-1250</span>
+                    <button class="account-btn" onclick="window.open('https://wa.me/qr/WWVHEA4ZUV5TO1', '_blank')">
+                        <i class="fab fa-whatsapp"></i> Chat
+                    </button>
+                </li>
+            </ul>
         </div>
     </div>
 </body>
-<footer>
+<footer class="main-footer">
+    <div class="footer-content">
         <p>&copy; 2025 Biodata Diri ZLF. All rights reserved.</p>
-        <script src="js/script.js"></script>
-    </footer>
+        <div class="footer-social">
+            <a href="https://www.instagram.com/zyren.in.calm/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.tiktok.com/@zyren.in.calm" target="_blank"><i class="fab fa-tiktok"></i></a>
+            <a href="https://web.facebook.com/zulfi.g.saputra.5/" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://x.com/ZulGS_Jungle29" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.youtube.com/@Mekanikz" target="_blank"><i class="fab fa-youtube"></i></a>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</footer>
 </html>
